@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "ts-node": "3.3.0",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.8.1",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "0.2.12"
+  },
+  "scripts": {
+    "start": "ts-node-dev src/index.ts"
+  }
+}
