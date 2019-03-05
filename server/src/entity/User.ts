@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Snippet } from "./Snippet";
 
 @Entity({ name: "users" })
 export class User {
@@ -45,10 +46,7 @@ export class User {
   })
   createdAt: string;
 
-  @Column({
-    type: "timestamp with time zone",
-    default: () => "CURRENT_TIMESTAMP"
-  })
-  updatedAt: string;
+  @OneToMany(type => Snippet, snippet => snippet.user)
+  snippet: Snippet[]
 
 }
