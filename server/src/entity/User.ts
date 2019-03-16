@@ -41,6 +41,12 @@ export class User {
   profile_pic: string;
 
   @Column({
+    type: "simple-array",
+    nullable: true
+  })
+  links: string[];
+
+  @Column({
     type: "timestamp with time zone",
     default: () => "CURRENT_TIMESTAMP"
   })
