@@ -26,12 +26,6 @@ export class Snippet {
   language: string;
 
   @Column({
-    type: "simple-array",
-    nullable: false
-  })
-  tags: string[];
-
-  @Column({
     type: "timestamp with time zone",
     default: () => "CURRENT_TIMESTAMP"
   })
