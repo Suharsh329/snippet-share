@@ -6,7 +6,12 @@ class UserController {
 
   static getAll = async (req: Request, res: Response) => {
     const userRepository = getRepository(User);
-    const users = await userRepository.find();
+    let users: User[] = undefined;
+    try {
+      users = await userRepository.find();
+    } catch (error) {
+      console.log(error);
+    }
     res.send(users);
   };
 
