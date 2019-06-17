@@ -19,6 +19,7 @@ snippet-share is bundled with Vue.js and Node.js + Express.js + TypeORM.
 ```bash
 git clone git@github.com:Suharsh329/snippet-share.git  
 cd server  
+cp ormconfig.json.example ormconfig.json // Add configurations  
 npm install  
 ```
 <!--
@@ -38,6 +39,7 @@ npm start
 * View code snippets without needing an account
 * Create code snippets
 * Bookmark snippets
+* Like snippets
 * Search for snippets based on a tag, title or user
 
 ## License

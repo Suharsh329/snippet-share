@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "description": "Awesome project developed with TypeORM.",
+  "description": "An application to create and browse code snippets",
   "devDependencies": {
     "@types/node": "^8.0.29",
     "chai": "^4.2.0",
