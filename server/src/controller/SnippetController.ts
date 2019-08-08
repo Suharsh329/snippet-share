@@ -9,7 +9,7 @@ class SnippetController {
     const manager = getManager();
     let snippets: Snippet = undefined;
     try {
-      snippets = await manager.query("SELECT * FROM regular_user LIMIT 25");
+      snippets = await manager.query("SELECT * FROM guest_user LIMIT 25");
     } catch (error) {
       console.log(error)
     }

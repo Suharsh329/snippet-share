@@ -37,12 +37,14 @@ export class users1551799014012 implements MigrationInterface {
         {
           name: "profile_pic",
           type: "text",
+          isNullable: false,
           default: "'profile_pics/default.png'"
         },
         {
           name: "links",
           type: "text[]",
-          isNullable: true
+          isNullable: false,
+          default: "ARRAY[]::TEXT[]"
         },
         {
           name: "createdAt",

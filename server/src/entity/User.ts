@@ -36,13 +36,15 @@ export class User {
 
   @Column({
     type: "text",
+    nullable: false,
     default: "'profile_pics/default.png'"
   })
   profile_pic: string;
 
   @Column({
     type: "simple-array",
-    nullable: true
+    nullable: false,
+    default: "ARRAY[]::TEXT[]"
   })
   links: string[];
 
