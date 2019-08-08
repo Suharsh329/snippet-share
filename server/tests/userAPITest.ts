@@ -11,7 +11,7 @@ describe('User API Tests', () => {
     request(app).get('/users')
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(res.status).to.equal(200);
         expect(res.body).to.be.an('array');
@@ -23,7 +23,7 @@ describe('User API Tests', () => {
     request(app).get('/users/1')
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(res.status).to.equal(200);
         expect(res.body.name).to.equal('John Doe');
@@ -34,7 +34,7 @@ describe('User API Tests', () => {
   it("should return not found for a non existent user", (done) => {
     request(app).get("/users/10")
       .set("Accept", "application/json")
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(404);
         done();
@@ -46,7 +46,7 @@ describe('User API Tests', () => {
       .type('form')
       .send({ name: 'Jane Doe', username: 'jane123', email: 'jane@email.com', password: 'password' })
       .set("Accept", "application/json")
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(201);
         done();
@@ -58,7 +58,7 @@ describe('User API Tests', () => {
       .type('form')
       .send({ name: 'Jane Doe', username: 'jane123', password: 'password' })
       .set("Accept", "application/json")
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(404);
         done();
@@ -70,7 +70,7 @@ describe('User API Tests', () => {
       .type('form')
       .send({ email: 'john123@gmail.com' })
       .set("Accept", "application/json")
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(200);
         done();
@@ -80,7 +80,7 @@ describe('User API Tests', () => {
   it("should delete specified user", (done) => {
     request(app).delete("/users/2")
       .set("Accept", "application/json")
-      .end((err, res) => {
+      .end((err: Error, res: any) => {
         if (err) done(err);
         expect(204);
         done();
