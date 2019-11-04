@@ -18,7 +18,7 @@
     "typeorm": "0.2.12"
   },
   "scripts": {
-    "start": "ts-node-dev src/index.ts",
+    "start": "./node_modules/ts-node-dev/bin/ts-node-dev src/index.ts",
     "test": "mocha --require ts-node/register tests/**/*.ts --exit"
   }
 }
