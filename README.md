@@ -1,5 +1,7 @@
 <h1 align="center">snippet-share</h1>
 
+ ![](screenshots/home-page.png) 
+
 ## Description
 
 An application to browse, create and save code snippets. Somewhere along the lines of GitHub Gists.  
@@ -14,7 +16,23 @@ snippet-share is bundled with Vue.js and Node.js + Express.js + TypeORM.
    * [License](#license)
 <!--te-->
 
-## Local Installation (Server Side Only)
+
+## Local Installation
+
+### Client Side
+
+```bash
+git clone git@github.com:Suharsh329/snippet-share.git  
+cd client
+npm install  
+```
+
+Start the development server 
+```bash
+npm run serve
+```
+
+### Server Side
 
 ```bash
 git clone git@github.com:Suharsh329/snippet-share.git  
@@ -31,7 +49,7 @@ The command will create the tables(relations) in your database with all the nece
 
 Start the development server 
 ```bash
-npm start
+npm run start
 ```
 
 ## Features
